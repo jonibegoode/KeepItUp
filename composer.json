@@ -1,0 +1,6 @@
+{
+    "require": {
+        "abraham/twitteroauth": "^0.6.4",
+        "adoy/oauth2": "^1.3"
+    }
+}
