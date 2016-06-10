@@ -4,7 +4,7 @@
 require "vendor/autoload.php";
 
 
-use Abraham\TwitterOAuth\TwitterOAuth;
+/*use Abraham\TwitterOAuth\TwitterOAuth;
 
 define('CONSUMER_KEY', 'uD9Shmh5aRFwxE2wfCUMkm0HU');
 define('CONSUMER_SECRET', 'RWv4ZtV1zotPwH8JC2ySZLKyT2nTgLnF4qsGWgyf2FSjahQzan');
@@ -25,7 +25,7 @@ $results = $toa->get('search/tweets', $query);
 
 /*echo "<pre>";
 echo highlight_string(var_export($results, true));
-echo "</pre>";*/
+echo "</pre>";
 
 foreach ($results->statuses as $result) {
 
@@ -38,10 +38,10 @@ foreach ($results->statuses as $result) {
 	}
 	echo $display;
 /*	    $media_size_h = $result->entities->media->sizes->small->h;
-    $media_size_w = $result->entities->media->sizes->small->w;*/
+    $media_size_w = $result->entities->media->sizes->small->w;
 }
 
-/*$result->user->screen_name . ': ' . $result->text .': <img src="'.$result->entities->media[0]->media_url.'"><br>';*/
+/*$result->user->screen_name . ': ' . $result->text .': <img src="'.$result->entities->media[0]->media_url.'"><br>';
 
 
 
@@ -86,7 +86,7 @@ else
 
 /*    echo('<strong>Response for fetch me.json:</strong><pre>');
     var_dump($responses);
-    echo('</pre>');*/
+    echo('</pre>');
 
 		foreach ($children as $child){
     	echo $child['data']['title'].'<br>';
@@ -96,3 +96,14 @@ else
     	echo $child['data']['selftext'].'<br><hr>';
     }
 }
+*/
+
+use Madcoda\Youtube;
+
+$youtube = new Youtube(array('key' => '/AIzaSyBU41V2vhs_NvGHc3i6uRNE7k4dtzI8fh8/'));
+
+$video = $youtube->getVideoInfo('rie-hPVJ7Sw');
+
+echo "<pre>";
+print_r($video);
+echo "</pre>";
